@@ -12,7 +12,7 @@ import java.util.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class Feedbacks extends JFrame implements ActionListener{
+public class Payroll extends JFrame implements ActionListener{
 //    
     Random ran = new Random();
     int number = ran.nextInt(999999);
@@ -24,10 +24,10 @@ public class Feedbacks extends JFrame implements ActionListener{
     JLabel lblempId;
     JButton add, back;
     
-    Feedbacks() {
+    Payroll() {
         getContentPane().setBackground(new Color(211, 211, 211));
         setLayout(null);
-        setTitle("Feedback");
+        setTitle("Payroll");
         
         JLabel heading = new JLabel("Employees Feedback");
         heading.setBounds(303, 57, 314, 49);
@@ -188,7 +188,7 @@ public class Feedbacks extends JFrame implements ActionListener{
         
 //        setSize(900, 700);
 //        setLocation(300, 50);
-        setBounds(400, 80, 935, 737);
+        setBounds(400, 80, 600, 900);
         setVisible(true);
     }
     
@@ -198,8 +198,8 @@ public class Feedbacks extends JFrame implements ActionListener{
         if (ae.getSource() == add) {
             String name = tfEmpname.getText();
             String empId = lblempId.getText();
-            String location = tfflocationn.getText();
-            String Employee = tfflocation.getText();
+            String location = tfflocation.getText();
+            String Employee = tfflocationn.getText();
             String job = tffjob.getText();
 //            String dob = ((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
             String salary = tfsalary.getText();
@@ -228,6 +228,6 @@ public class Feedbacks extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new Feedbacks();
+        new Payroll();
     }
 }
